@@ -1,0 +1,12 @@
+C:\Users\Dell\Documents\New folder (2)\loginpage\bin\Debug\loginpage.exe.config
+C:\Users\Dell\Documents\New folder (2)\loginpage\bin\Debug\loginpage.exe
+C:\Users\Dell\Documents\New folder (2)\loginpage\bin\Debug\loginpage.pdb
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.Properties.Resources.resources
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.csproj.GenerateResource.cache
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.exe
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.pdb
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.AdminForm.resources
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.Form1.resources
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.RegisterForm.resources
+C:\Users\Dell\Documents\New folder (2)\loginpage\obj\Debug\loginpage.StudentForm.resources
