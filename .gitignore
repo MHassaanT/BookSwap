@@ -1,0 +1,26 @@
+## [ Visual Studio / Rider / .NET ]
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# NuGet Packages
+*.nuget.props
+*.nuget.targets
+packages/
+
+# User-specific files (Don't share these!)
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# JetBrains Rider / IntelliJ / WebStorm
+.idea/
+*.sln.iml
+
+# OS generated

@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Module_2"
+        x:Class="Module_2.MainWindow"
+        x:DataType="local:MainWindow"
+        Title="BookSwap Catalog" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="txtSearch" Width="200" Margin="5" 
+                     Watermark="Search Title or Author..." 
+                     KeyUp="OnSearchKeyUp"/>
+            
+            <ComboBox x:Name="cmbCategory" Width="150" Margin="5" 
+                      SelectedIndex="0"
+                      SelectionChanged="OnCategoryChanged">
+                <ComboBoxItem Content="All Categories"/>
+                <ComboBoxItem Content="Engineering"/>
+                <ComboBoxItem Content="Science"/>
+                <ComboBoxItem Content="Arts"/>
+            </ComboBox>
+
+            <Slider x:Name="sldPrice" Width="100" Minimum="0" Maximum="200" 
+                    Value="200" PropertyChanged="OnSliderChanged"/>
+            <TextBlock Text="{Binding #sldPrice.Value, StringFormat={}{0:C}}" 
+                       VerticalAlignment="Center" Margin="5,0"/>
+        </StackPanel>
+
+        <ListBox x:Name="lstBooks" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="local:Book">
+                    <Border BorderBrush="LightGray" BorderThickness="1" Margin="5" Padding="10">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Author}" FontStyle="Italic" Foreground="Gray"/>
+                                <TextBlock Text="{Binding Category}" Foreground="DarkBlue"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="{Binding DisplayPrice}" FontSize="16" Foreground="Green" HorizontalAlignment="Right"/>
+                                <TextBlock Text="{Binding Status}" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
