@@ -29,6 +29,6 @@
     "Author": "Foyder Dosteesky",
     "Price": 2000,
     "Seller": "You",
-    "IsAvailable": true
+    "IsAvailable": false
   }
 ]

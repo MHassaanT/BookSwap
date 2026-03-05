@@ -1,0 +1,11 @@
+[
+  {
+    "Id": 1,
+    "BookId": 4,
+    "BookTitle": "Crime and punishment",
+    "BuyerName": "You (Buyer)",
+    "SellerName": "You",
+    "Price": 2000,
+    "Date": "2026-03-05T20:24:12.4241422+05:00"
+  }
+]
