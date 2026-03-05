@@ -1,0 +1,34 @@
+[
+  {
+    "Id": 1,
+    "Title": "C# Programming",
+    "Author": "John",
+    "Price": 29.99,
+    "Seller": "Alice",
+    "IsAvailable": false
+  },
+  {
+    "Id": 2,
+    "Title": "Python Basics",
+    "Author": "Jane",
+    "Price": 24.99,
+    "Seller": "Bob",
+    "IsAvailable": true
+  },
+  {
+    "Id": 3,
+    "Title": "Java Guide",
+    "Author": "Mike",
+    "Price": 34.99,
+    "Seller": "Charlie",
+    "IsAvailable": true
+  },
+  {
+    "Id": 4,
+    "Title": "Crime and punishment",
+    "Author": "Foyder Dosteesky",
+    "Price": 2000,
+    "Seller": "You",
+    "IsAvailable": true
+  }
+]
