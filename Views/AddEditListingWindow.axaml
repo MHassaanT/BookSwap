@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BookSwap.Views.AddEditListingWindow"
+        Title="Add/Edit Listing" Width="400" Height="500"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock x:Name="txtHeader" Text="Add New Listing" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+        
+        <TextBlock Text="Title" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtTitle" Watermark="Book Title"/>
+        
+        <TextBlock Text="Author" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtAuthor" Watermark="Author Name"/>
+        
+        <TextBlock Text="Category" FontWeight="SemiBold"/>
+        <ComboBox x:Name="cmbCategory" SelectedIndex="0" HorizontalAlignment="Stretch">
+            <ComboBoxItem Content="Engineering"/>
+            <ComboBoxItem Content="Science"/>
+            <ComboBoxItem Content="Arts"/>
+            <ComboBoxItem Content="General"/>
+        </ComboBox>
+        
+        <TextBlock Text="Condition" FontWeight="SemiBold"/>
+        <ComboBox x:Name="cmbCondition" SelectedIndex="0" HorizontalAlignment="Stretch">
+            <ComboBoxItem Content="New"/>
+            <ComboBoxItem Content="Like New"/>
+            <ComboBoxItem Content="Good"/>
+            <ComboBoxItem Content="Fair"/>
+            <ComboBoxItem Content="Poor"/>
+        </ComboBox>
+        
+        <TextBlock Text="Price ($)" FontWeight="SemiBold"/>
+        <TextBox x:Name="txtPrice" Watermark="e.g. 15.50"/>
+        
+        <TextBlock x:Name="txtError" Foreground="Red" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10" Margin="0,15,0,0">
+            <Button Content="Cancel" Width="100" HorizontalContentAlignment="Center" Click="OnCancelClick"/>
+            <Button Content="Save Listing" Width="120" HorizontalContentAlignment="Center" Background="#28A745" Foreground="White" Click="OnSaveClick"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

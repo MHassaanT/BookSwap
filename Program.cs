@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace Module_2;
+namespace BookSwap;
 
 class Program
 {

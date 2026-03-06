@@ -1,8 +1,9 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using BookSwap.Views;
 
-namespace Module_2;
+namespace BookSwap;
 
 public partial class App : Application
 {
@@ -15,7 +16,7 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+            desktop.MainWindow = new LoginWindow();
         }
 
         base.OnFrameworkInitializationCompleted();

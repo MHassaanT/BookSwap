@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:core="clr-namespace:BookSwap.Core"
+        x:Class="BookSwap.Views.ManageUsersWindow"
+        Title="Manage Users" Width="700" Height="500"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="15" RowDefinitions="Auto,*,Auto">
+        <TextBlock Grid.Row="0" Text="Manage Users" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+        
+        <ListBox x:Name="lstUsers" Grid.Row="1" Margin="0,10,0,10">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="core:User">
+                    <Border BorderBrush="#CCC" BorderThickness="1" CornerRadius="5" Padding="10" Margin="5">
+                        <Grid ColumnDefinitions="*,Auto">
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16"/>
+                                <TextBlock Text="{Binding Email}" Foreground="#555"/>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <TextBlock Text="{Binding Role}" Foreground="#007ACC" FontWeight="SemiBold"/>
+                                    <TextBlock Text="{Binding ContactInfo}" Foreground="Gray"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <Button Grid.Column="1" Content="Delete/Ban" Background="#DC3545" Foreground="White" 
+                                    VerticalAlignment="Center" Click="OnDeleteUserClick" Tag="{Binding ID}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <Button Grid.Row="2" Content="Close" Width="100" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Click="OnCloseClick"/>
+    </Grid>
+</Window>
