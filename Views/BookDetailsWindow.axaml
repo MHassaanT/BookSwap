@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BookSwap.Views.BookDetailsWindow"
+        Title="Book Details" Width="500" Height="400"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Book Details" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center"/>
+        
+        <Border BorderBrush="#CCC" BorderThickness="1" CornerRadius="5" Padding="15" Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" Margin="10">
+                
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Title:" FontWeight="Bold" Margin="0,0,20,10"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" x:Name="txtTitle" FontSize="16" FontWeight="SemiBold"/>
+                
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Author:" FontWeight="Bold" Margin="0,0,20,10"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" x:Name="txtAuthor" FontStyle="Italic"/>
+                
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Category:" FontWeight="Bold" Margin="0,0,20,10"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" x:Name="txtCategory"/>
+                
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Condition:" FontWeight="Bold" Margin="0,0,20,10"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="txtCondition"/>
+                
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Seller:" FontWeight="Bold" Margin="0,0,20,10"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" x:Name="txtSeller"/>
+                
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Price:" FontWeight="Bold" Margin="0,0,20,0"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" x:Name="txtPrice" Foreground="#28A745" FontWeight="Bold" FontSize="18"/>
+            </Grid>
+        </Border>
+        
+        <TextBlock x:Name="txtStatusMsg" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#DC3545"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15" Margin="0,10,0,0">
+            <Button Content="Close" Width="100" HorizontalContentAlignment="Center" Click="OnCloseClick"/>
+            <Button x:Name="btnBuy" Content="Buy Book" Width="120" HorizontalContentAlignment="Center" Background="#007ACC" Foreground="White" Click="OnBuyClick"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
